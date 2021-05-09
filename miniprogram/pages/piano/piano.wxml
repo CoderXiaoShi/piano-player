@@ -1,0 +1,43 @@
+<view 
+  wx:if="{{ userInfo === null }}"
+  class="login-container"
+>
+  <button 
+    bindtap="getUserInfo" 
+    type="primary"
+  >开始弹钢琴</button>
+</view>
+<view 
+  class="container" 
+  wx:if="{{ userInfo !== null }}"
+>
+  <piano-keys
+    bind:keyDown="keyDown"
+    openid="2233"
+    class="girl"
+    disable="true"
+  >
+  </piano-keys>
+  <view class="userContainer" >
+    <view class="girl-user userAvatar" >
+      <image 
+        class="avatar"
+        src="{{ user.avatarUrl }}"
+      />
+      <view class="nickname" >{{user.nickName}}</view>
+    </view>
+    <view class="slef-user userAvatar" >
+      <image 
+        class="avatar"
+        src="{{ userInfo.avatarUrl }}"
+      />
+      <view class="nickname" >{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <piano-keys
+    bind:keyDown="keyDown"
+    openid="{{openId}}"
+    class="slef"
+  >
+  </piano-keys>
+</view>

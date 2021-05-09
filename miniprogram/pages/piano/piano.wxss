@@ -1,0 +1,47 @@
+/* miniprogram/pages/piano/piano.wxss */
+.girl{
+  transform: rotate(180deg);
+}
+.userContainer{
+  width: 95vw;
+  height: 17vh;
+  display: flex;
+  flex-direction: row;
+}
+.userAvatar{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+.userAvatar .avatar{
+  width: 50px;
+  height: 50px;
+}
+.girl-user{
+
+}
+.slef-user{
+  width: 50vw;
+  align-items: flex-end;
+}
+.userAvatar .nickname{
+  font-size: 22rpx;
+}
+.slef{
+  position: fixed;
+  bottom: 3vh;
+}
+page{
+  height: 100vh;
+}
+.container{
+  height: 100vh;
+}
+.login-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

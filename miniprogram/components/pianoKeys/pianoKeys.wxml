@@ -1,0 +1,27 @@
+<view 
+  class="keys {{ class }}"
+>
+  <view class="mask" wx:if="{{disable}}" ></view>
+  <view class="white" >
+    <view 
+      wx:for="{{whiteKeys}}" 
+      wx:for-index="idx"
+      wx:for-item="item"
+      wx:key="item"
+      data-key="{{item}}" 
+      class="{{keyDownMap[item] ? 'whiteKey_keyActive' : ''}}"
+      bindtouchstart="touchStart"  bindtouchend="touchEnd" 
+    ></view>
+  </view>
+  <view class="white black" >
+    <view 
+      wx:for="{{blackKeys}}"
+      wx:for-item="item"
+      wx:for-index="idx"
+      wx:key="item"
+      class="blackKey {{keyDownMap[item] ? 'whiteKey_keyActive' : ''}}"
+      data-key="{{item}}" 
+      bindtouchstart="touchStart" bindtouchend="touchEnd" 
+    ></view>
+  </view>
+</view>
